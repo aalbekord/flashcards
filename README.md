@@ -27,24 +27,31 @@ The following **optional** features are implemented:
 
 - [ ] Cards contain images in addition to or in place of text
   - [ ] Some or all cards have images in place of or in addition to text
-- [ ] Cards have different visual styles such as color based on their category
+- [x] Cards have different visual styles such as color based on their category
   - Example categories you can use:
     - Difficulty: Easy/medium/hard
     - Subject: Biology/Chemistry/Physics/Earth science
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- Randomize Button to randomize indexes of the card set
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<div>
+    <a href="https://www.loom.com/share/f192dafbfc6141088a92b420a02ec349">
+      <p>WEB102 - CS Brain Teaser - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/f192dafbfc6141088a92b420a02ec349">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f192dafbfc6141088a92b420a02ec349-e9b774f87701c3af-full-play.gif">
+    </a>
+  </div>
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+Video created with Loom
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -53,11 +60,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had trouble dealing with the re-rendering when it came to displaying a new card
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Amirsina Albekord]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
