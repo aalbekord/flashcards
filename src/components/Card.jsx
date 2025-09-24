@@ -12,7 +12,7 @@ const Card = (props) => {
 
   return (
     <>
-      <div onClick={handleClick}>{text}</div>
+      <div className={`card ${props.difficulty}`} onClick={handleClick}>{text}</div>
     </>
   )
 }
