@@ -56,3 +56,26 @@ body {
   text-transform: uppercase; /* Make the text uppercase */
   letter-spacing: 2px; /* Add some spacing between letters */
 }
+
+.random-button {
+  background-color: #228B22; /* Forest green background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for a larger button */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Smooth hover effects */
+  margin-top: 20px; /* Add spacing above the button */
+}
+
+.random-button:hover {
+  background-color: #1e7a1e; /* Darker forest green on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.random-button:active {
+  background-color: #166116; /* Even darker forest green when clicked */
+  transform: scale(0.95); /* Slightly shrink on click */
+}
