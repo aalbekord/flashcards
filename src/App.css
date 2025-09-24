@@ -1,0 +1,58 @@
+* {
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+.arrow {
+  background-color: #383c47; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 10%; /* Circular button */
+  width: 50px;
+  height: 50px;
+  font-size: 24px; /* Larger arrow */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.arrow:hover {
+  background-color: #333640; /* Darker blue on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.arrow:active {
+  background-color: #24272e; /* Even darker blue when clicked */
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.title {
+  font-size: 36px; /* Larger font size */
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Dark gray color for better readability */
+  margin-bottom: 20px; /* Add spacing below the title */
+  text-align: center; /* Center the title */
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 2px; /* Add some spacing between letters */
+}

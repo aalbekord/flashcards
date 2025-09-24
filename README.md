@@ -1,6 +1,6 @@
-# Web Development Project 2 - _Name of App Here_
+# Web Development Project 2 - _Flashcards_
 
-Submitted by: **Your Name Here**
+Submitted by: **Amirsina Albekord**
 
 This web app: **insert description**
 

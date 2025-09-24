@@ -8,12 +8,30 @@ function App() {
   console.log(cards)
 
   const currentCard = cards[index]
-  
+  function handleBackClick() {
+    setIndex(index - 1)
+  }
+  function handleForwardClick() {
+    setIndex(index + 1)
+  }
   return (
     <>
-      <h1 className="title">CS Trivia</h1>
-      <p>Here is a {cards.length} card set of flashcards to learn some fun facts about Computer Science!</p>
+      <h1 className="title">CS Brain Teaser</h1>
+      <p>Here is a set of {cards.length} flashcards to learn some fun and important concepts about Computer Science!</p>
       <Card front={currentCard.front} back={currentCard.back} difficulty={currentCard.difficulty}/>
+      <div className="arrow-buttons">
+      {index > 0 && 
+        <button className="arrow" onClick={handleBackClick}>
+            <span>←</span>
+        </button>
+      }
+      {index < cards.length - 1 && 
+        <button className="arrow" onClick={handleForwardClick}>
+          <span>→</span>
+        </button>
+      }
+      </div>
+      <button className="random-button">Randomize</button>
     </>
   )
 }
