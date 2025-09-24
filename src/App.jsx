@@ -14,7 +14,7 @@ function App() {
   
   function handleForwardClick() {
     if(index < cards.length - 1)
-      setIndex(index + 1)
+      setIndex(Math.floor(Math.random() * (cards.length - 1)))
   }
 
   const shuffle = (array) => {
