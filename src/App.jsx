@@ -7,12 +7,12 @@ function App() {
   const [index, setIndex] = useState(0)
   console.log(cards)
   
-  function handleBackClick() {
+  const handleBackClick = () => {
     if(index > 0)
       setIndex(index - 1)
   }
   
-  function handleForwardClick() {
+  const handleForwardClick = () => {
     if(index < cards.length - 1)
       setIndex(Math.floor(Math.random() * (cards.length - 1)))
   }
