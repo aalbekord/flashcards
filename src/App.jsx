@@ -3,6 +3,7 @@ import Card from "./components/Card"
 import cardsInfo from "./data/cards"
 import { useState } from 'react'
 import { useOnKeyPress } from "./hooks/useOnKeyPress";
+import InputForm from "./components/InputForm"
 function App() {
   const [cards, setCards] = useState(cardsInfo)
   const [index, setIndex] = useState(0)
@@ -43,6 +44,7 @@ function App() {
         </button>
       </div>
       <button className="random-button" onClick={() => shuffle(cards)}>Randomize</button>
+      <InputForm />
     </>
   )
 }
