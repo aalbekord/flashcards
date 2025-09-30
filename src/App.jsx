@@ -19,8 +19,20 @@ function App() {
       setIndex(index + 1)
   }
   const handleRestartClick = () => {
-      setIndex(0);
+    setIndex(0);
   }
+  const handleResetClick = () => {
+    setCards(cardsInfo)
+  }
+  const handleRemoveCard =() => {
+    const array = [...cards]
+    array.splice(index, 1);
+    setCards(array)
+    console.log(cards)
+  }
+  
+  console.log(cardsInfo);
+
   useOnKeyPress(handleBackClick, "ArrowLeft");
   useOnKeyPress(handleForwardClick, "ArrowRight");
   const shuffle = (array) => {
@@ -37,22 +49,35 @@ function App() {
     <>
       <h1 className="title">CS Brain Teaser</h1>
       <p>Here is a set of {cards.length} flashcards to learn some fun and important concepts about Computer Science!</p>
-      <Card front={cards[index].front} back={cards[index].back} difficulty={cards[index].difficulty}/>
-      <div className="arrow-buttons">
-        <button className="arrow" onClick={handleBackClick}>
-            <span>←</span>
-        </button>
-        <button className="arrow" onClick={handleForwardClick}>
-          <span>→</span>
-        </button>
-        {index === cards.length - 1 && (
-          <button className="arrow" onClick={handleRestartClick}>
-            <span>↻</span>
+      { cards.length > 0 && ( <>
+        <Card front={cards[index].front} back={cards[index].back} difficulty={cards[index].difficulty}/>
+        <div className="arrow-buttons">
+          <button className="button" onClick={handleRemoveCard}>
+            <span>mark</span>
           </button>
-        )}
-      </div>
-      <button className="random-button" onClick={() => shuffle(cards)}>Randomize</button>
-      <InputForm answer={cards[index].back}/>
+          <button className="arrow" onClick={handleBackClick}>
+              <span>←</span>
+          </button>
+          <button className="arrow" onClick={handleForwardClick}>
+            <span>→</span>
+          </button>
+          {index === cards.length - 1 && (
+            <button className="arrow" onClick={handleRestartClick}>
+              <span>↻</span>
+            </button>
+          )}
+          <button className="random-button" onClick={() => shuffle(cards)}>
+            <span>Randomize</span>
+          </button>
+        </div>
+        <InputForm answer={cards[index].back}/>
+      </>
+    )}
+    {cards.length === 0 && (
+      <button className="arrow" onClick={handleResetClick}>
+        <span>↻</span>
+      </button>
+    )}
     </>
   )
 }
