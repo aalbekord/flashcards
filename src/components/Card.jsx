@@ -1,33 +1,25 @@
-import "./Card.css"
-import { useState, useEffect} from 'react'
+import "./Card.css";
+import { useState } from "react";
+import { useOnKeyPress } from "../hooks/useOnKeyPress";
+
 const Card = (props) => {
+  const [isFront, setIsFront] = useState(true);
 
-  const [isFront, setIsFront] = useState(true)
+  useOnKeyPress(() => setIsFront(!isFront), " ");
 
-  function handleClick() {
-    setIsFront(!isFront)
-  }
+  const handleClick = () => {
+    setIsFront(!isFront);
+  };
 
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === ' ') {
-        setIsFront(!isFront);
-      }
-    };
-    
-    window.addEventListener('keydown', handleKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [isFront]);
-
-  const text = isFront ? props.front : props.back
+  const text = isFront ? props.front : props.back;
 
   return (
     <>
-      <div className={`card ${props.difficulty}`} onClick={handleClick}>{text}</div>
+      <div className={`card ${props.difficulty}`} onClick={handleClick}>
+        {text}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Card;

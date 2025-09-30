@@ -2,6 +2,7 @@ import './App.css'
 import Card from "./components/Card"
 import cardsInfo from "./data/cards"
 import { useState } from 'react'
+import { useOnKeyPress } from "./hooks/useOnKeyPress";
 function App() {
   const [cards, setCards] = useState(cardsInfo)
   const [index, setIndex] = useState(0)
@@ -14,9 +15,10 @@ function App() {
   
   const handleForwardClick = () => {
     if(index < cards.length - 1)
-      setIndex(Math.floor(Math.random() * (cards.length - 1)))
+      setIndex(index + 1)
   }
-
+  useOnKeyPress(handleBackClick, "ArrowLeft");
+  useOnKeyPress(handleForwardClick, "ArrowRight");
   const shuffle = (array) => {
     const shuffled = [...array];
     for (var i = array.length - 1; i > 0; i--) 
