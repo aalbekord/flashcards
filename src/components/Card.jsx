@@ -1,5 +1,5 @@
 import "./Card.css"
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 const Card = (props) => {
 
   const [isFront, setIsFront] = useState(true)
@@ -7,6 +7,19 @@ const Card = (props) => {
   function handleClick() {
     setIsFront(!isFront)
   }
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === ' ') {
+        setIsFront(!isFront);
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [isFront]);
 
   const text = isFront ? props.front : props.back
 
