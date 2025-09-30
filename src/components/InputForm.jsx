@@ -14,20 +14,27 @@ const InputForm = (props) => {
   const handleButtonClick = () => {
     if(guess.toLowerCase() === props.answer.toLowerCase()) {
       setColor("green")
-      setStreak(streak + 1)
+      // in order to dynamically use the new value, a new const must be made
+      const newStreak = streak + 1
+      setStreak(newStreak)
+      if(newStreak >= highestStreak)
+        setHighestStreak(newStreak) 
     }
     else {
       setColor("red")
       setStreak(0)
     }
-    if(streak > highestStreak)
-      setHighestStreak(streak)
     setGuess("")
   }
   
+const handleFormSubmit = (e) => {
+  e.preventDefault()
+  handleButtonClick()
+}
+
   return (
     <>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <p>
           <span>Guess the answer here: </span>
         </p>
