@@ -1,0 +1,28 @@
+/* Base styling for the input field */
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc; /* Default border color */
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state for the input */
+input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow */
+}
+
+/* Styling for a correct guess */
+input.green {
+  border-color: #28a745; /* Green border */
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Subtle green glow */
+}
+
+/* Styling for an incorrect guess */
+input.red {
+  border-color: #dc3545; /* Red border */
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Subtle red glow */
+}
