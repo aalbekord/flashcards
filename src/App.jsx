@@ -18,6 +18,9 @@ function App() {
     if(index < cards.length - 1)
       setIndex(index + 1)
   }
+  const handleRestartClick = () => {
+      setIndex(0);
+  }
   useOnKeyPress(handleBackClick, "ArrowLeft");
   useOnKeyPress(handleForwardClick, "ArrowRight");
   const shuffle = (array) => {
@@ -42,9 +45,14 @@ function App() {
         <button className="arrow" onClick={handleForwardClick}>
           <span>→</span>
         </button>
+        {index === cards.length - 1 && (
+          <button className="arrow" onClick={handleRestartClick}>
+            <span>↻</span>
+          </button>
+        )}
       </div>
       <button className="random-button" onClick={() => shuffle(cards)}>Randomize</button>
-      <InputForm />
+      <InputForm answer={cards[index].back}/>
     </>
   )
 }
