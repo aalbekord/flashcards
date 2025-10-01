@@ -26,3 +26,42 @@ input.red {
   border-color: #dc3545; /* Red border */
   box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* Subtle red glow */
 }
+/* Styling for the Submit Guess button */
+button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for a comfortable size */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+  margin: 8px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:active {
+  background-color: #003f7f; /* Even darker blue when clicked */
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Styling for the streaks */
+div {
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 10px; /* Add spacing between streaks */
+}
+
+div#current-streak {
+  color: #28a745; /* Green color for Current Streak */
+}
+
+div#highest-streak {
+  color: #dc3545; /* Red color for Highest Streak */
+}

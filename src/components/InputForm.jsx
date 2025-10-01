@@ -38,13 +38,21 @@ const handleFormSubmit = (e) => {
         <p>
           <span>Guess the answer here: </span>
         </p>
-        <input onChange={handleInputChange} className={color} type="text" value={guess} />
-        <button onClick={handleButtonClick} type="button">Submit Guess</button>
+        <input
+          onChange={handleInputChange}
+          className={color}
+          type="text"
+          value={guess}
+        />
+        <button onClick={handleButtonClick} type="button">
+          Submit Guess
+        </button>
       </form>
-      <div>Current Streak: {streak}</div>
-      <div>Highest Streak: {highestStreak}</div>
+      <div id="current-streak">Current Streak: {streak}</div>
+      <div id="highest-streak">Highest Streak: {highestStreak}</div>
     </>
   )
 };
 
 export default InputForm;
+
