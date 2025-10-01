@@ -44,16 +44,19 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-
+<div>
+    <a href="https://www.loom.com/share/d8a2863a787e444481e86c96b664ae6f">
+      <p>WEB 102 - CS Brain Teaser - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/d8a2863a787e444481e86c96b664ae6f">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/d8a2863a787e444481e86c96b664ae6f-68868a2db80e102c-full-play.gif">
+    </a>
+  </div>
 
 <!-- Replace this with whatever GIF tool you used! -->
 
 GIF created with Loom
 
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
