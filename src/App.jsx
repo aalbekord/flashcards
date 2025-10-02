@@ -9,11 +9,11 @@ function App() {
   const [index, setIndex] = useState(0)
   console.log(cards)
   
+  // button onChange functions
   const handleBackClick = () => {
     if(index > 0)
       setIndex(index - 1)
   }
-  
   const handleForwardClick = () => {
     if(index < cards.length - 1)
       setIndex(index + 1)
@@ -30,12 +30,6 @@ function App() {
     setCards(array)
     console.log(cards)
   }
-  
-  console.log(cardsInfo);
-
-  useOnKeyPress(handleBackClick, "ArrowLeft");
-  useOnKeyPress(handleForwardClick, "ArrowRight");
-  
   const shuffle = (array) => {
     const shuffled = [...array];
     for (var i = array.length - 1; i > 0; i--) 
@@ -46,16 +40,29 @@ function App() {
     setCards(shuffled);
   }
 
+  // allow for arrow key functionality
+  useOnKeyPress(handleBackClick, "ArrowLeft");
+  useOnKeyPress(handleForwardClick, "ArrowRight");
+
   return (
     <>
+      {/* header */}
       <h1 className="title">CS Brain Teaser</h1>
       <p>Here is a set of {cards.length} flashcards to learn some fun and important concepts about Computer Science!</p>
-      { cards.length > 0 && ( <>
         <Card front={cards[index].front} back={cards[index].back} difficulty={cards[index].difficulty}/>
         <div className="arrow-buttons">
-          <button className="button" onClick={handleRemoveCard}>
-            <span>mark</span>
-          </button>
+          {/* mark functionality buttons */}
+          {cards.length > 1 && (
+            <button className="button" onClick={handleRemoveCard}>
+                  <span>mark</span>
+            </button>
+          )}
+          {cards.length === 1 && (
+            <button className="arrow" onClick={handleResetClick}>
+              <span>↻</span>
+            </button>
+          )}
+          {/* rest of buttons */}
           <button className="arrow" onClick={handleBackClick}>
               <span>←</span>
           </button>
@@ -71,14 +78,8 @@ function App() {
             <span>Randomize</span>
           </button>
         </div>
+        {/* guessing component */}
         <InputForm answer={cards[index].back}/>
-      </>
-    )}
-    {cards.length === 0 && (
-      <button className="arrow" onClick={handleResetClick}>
-        <span>↻</span>
-      </button>
-    )}
     </>
   )
 }
