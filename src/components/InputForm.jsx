@@ -6,11 +6,13 @@ const InputForm = (props) => {
   const [color, setColor] = useState("")
   const [streak, setStreak] = useState(0)
   const [highestStreak, setHighestStreak] = useState(0)
+  
+  // onChange for guess input text box
   const handleInputChange = (e) => {
     const value = e.target.value;
     setGuess(value);
   }
-
+  // function to check guess
   const handleButtonClick = () => {
     if(guess.toLowerCase() === props.answer.toLowerCase()) {
       setColor("green")
@@ -26,11 +28,11 @@ const InputForm = (props) => {
     }
     setGuess("")
   }
-  
-const handleFormSubmit = (e) => {
-  e.preventDefault()
-  handleButtonClick()
-}
+  // prevent site from refreshing (default <form> setting)
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    handleButtonClick()
+  }
 
   return (
     <>
@@ -40,7 +42,7 @@ const handleFormSubmit = (e) => {
         </p>
         <input
           onChange={handleInputChange}
-          className={color}
+          className={`guess-text ${color}`}
           type="text"
           value={guess}
         />

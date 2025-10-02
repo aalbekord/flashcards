@@ -65,3 +65,9 @@ div#current-streak {
 div#highest-streak {
   color: #dc3545; /* Red color for Highest Streak */
 }
+/* automatically adjusting width for input box */
+.guess-text {
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
