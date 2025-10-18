@@ -1,8 +1,8 @@
-# Web Development Project 3 - _Flashcards_
+# Web Development Project 3 - _CS Brain Teaser_
 
 Submitted by: **Amirsina Albekord**
 
-This web app: **CS Brain Teaser**
+This web app: **An app that allows you to randomize, guess, and traverse through a list of flashcards with questions and answers related to Computer Science**
 
 Time spent: **6.5** hours spent in total
 
